@@ -1,0 +1,30 @@
+This is Adobe Flash Player (Firefox plugin for Linux) unfocus hack.
+This prevents the Flash Player from trapping key event.
+It helps to avoid problems with key input.  For example, it helps Vimperator.
+
+The simplest way to compile and install this package is:
+(For Gentoo.  Except Gentoo, it may be necessary to adapt to the environment.)
+
+  - `cd' to the directory containing the package's source code and
+    type the following command.
+
+    $ make
+    # make install
+
+  NOTE: For Firefox 4 and later without plugin-container (or previous Firefox 4),
+	use `libfph-without-plugin-container.c' instead of `libfph.c'.
+	However, if together with nspluginwrapper, the above does not apply.
+
+Setup:
+
+  - Type the following command.
+
+    $ ln -s /opt/fph/fph.libflashplayer.so ~/.mozilla/plugins/
+
+Usage:
+
+  - At first focus is disabled.
+  - When focus is disabled, key event will not reach the Flash Player but Firefox.
+  - When focus is enabled, it is the original behavior.
+  - To enable focus when focus is disabled, middle click.
+  - To disable focus when focus is enabled, press CTRL-[ key.
