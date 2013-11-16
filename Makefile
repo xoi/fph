@@ -6,10 +6,11 @@ CC = gcc
 #endif
 ifeq ($(CODE),32bit)
   CFLAGS += -m32
-  ORG_PLUGIN = /opt/Adobe/flash-player32/libflashplayer.so
+  LIBDIR = lib32
 else
-  ORG_PLUGIN = /opt/Adobe/flash-player/flash-plugin/libflashplayer.so
+  LIBDIR = lib
 endif
+ORG_PLUGIN = /usr/$(LIBDIR)/nsbrowser/plugins/libflashplayer.so
 DESTDIR = /opt/fph
 
 all: fph.libflashplayer.so libfph.so
