@@ -1,9 +1,9 @@
 CDEBUG = -DNDEBUG
 CFLAGS = -O2 $(shell pkg-config --cflags gtk+-2.0) $(CDEBUG)
 CC = gcc
-ifeq ($(shell uname -m),x86_64)
+#ifeq ($(shell uname -m),x86_64)
   #CODE = 32bit
-endif
+#endif
 ifeq ($(CODE),32bit)
   CFLAGS += -m32
   ORG_PLUGIN = /opt/Adobe/flash-player32/libflashplayer.so
