@@ -30,4 +30,4 @@ install: all
 	install fph.libflashplayer.so $(DESTDIR)
 
 clean:
-	rm -f libfph.so fph.libflashplayer.so
+	$(RM) libfph.so fph.libflashplayer.so
