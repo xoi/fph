@@ -29,5 +29,8 @@ install: all
 	install -s libfph.so $(DESTDIR)
 	install fph.libflashplayer.so $(DESTDIR)
 
+remove:
+	$(RM) $(ORG_PLUGIN)
+
 clean:
 	$(RM) libfph.so fph.libflashplayer.so
